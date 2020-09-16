@@ -1,18 +1,19 @@
-<!-- item will be appened to this layout -->
+<!-- Log da mensagem -->
 <div id="log" class="sl__chat__layout">
 </div>
 
-<!-- chat item -->
+<!-- Mensagem do chat -->
 <script type="text/template" id="chatlist_item">
-  <div data-from="{from}" data-id="{messageId}">
-    <span class="meta" style="color: {color}">
-      <span class="badges">
-      </span>
-      <span class="name">{from}</span>
-    </span>
-
-    <div class="message">
-      {message}
+    <div data-from="{from}" data-id="{messageId}">
+        <!-- Ícones e Username -->
+        <span class="meta" style="color: {color}">
+            <span class="badges">
+            </span>
+            <span class="name">{from}</span>
+        </span>
+         <!-- Mensagem -->
+        <div class="message">
+            {message}
+        </div>
     </div>
-  </div>
 </script>
