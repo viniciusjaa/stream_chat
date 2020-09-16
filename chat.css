@@ -1,0 +1,135 @@
+/* chat.css */
+@import url('https://drive.google.com/file/d/1vHaQLmDF-ArttKe7sViPpfGpTw11tNxB/view?usp=sharing');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(15,15,15,1);
+}
+
+body {
+    background-color: transparent;
+    font-family: 'Zing Rust Demo Base', sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 50px;
+    color: rgba(250,250,250,1);
+}
+
+#log>div {
+    animation: fadeInRight .3s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;
+    -webkit-animation: fadeInRight .3s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;
+
+}
+
+.colon {
+    display: none;
+}
+
+#log {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0px;
+    line-height: 20pt;
+
+    animation: looping 4s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#log>div {
+    display: table-row;
+}
+
+#log>div.deleted {
+    visibility: hidden;
+}
+
+#log .emote {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 0.4em 0.2em;
+    position: relative;
+}
+
+#log .emote img {
+    display: inline-block;
+    height: 1em;
+    opacity: 0;
+}
+
+#log .message,#log .meta {
+
+}
+
+#log .meta {
+    width: 35%;
+    background-color: #54c297;
+    border-radius: 30px;
+    padding: 5px 10px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 3px 5px 15px rgba(5,5,5,0.8);
+
+    text-align: right;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#log .message {
+    word-wrap: break-word;
+    font-size: 14pt;
+    color: #fafafa;
+
+    border-radius: 12px;
+    width: 350px;
+    background-color: rgba(29,29,29,.8);
+    padding: 25px 25px 10px 25px;
+    position: relative;
+    margin-left: 15px;
+    margin-top: -15px;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.badge {
+    display: inline-block;
+    margin-right: 0.2em;
+    position: relative;
+    height: 1em;
+    vertical-align: middle;
+    top: -0.1em;
+    border-radius: 20px;
+}
+
+.name {
+    margin-left: 0.2em;
+
+    padding: 5px 10px;
+    border-radius: 100px;
+
+    color: #fafafa;
+    font-size: 10pt;
+
+    position: relative;
+}
+
+@keyframes looping {
+  0% {
+    bottom: 10px;
+  }
+
+  50% {
+    bottom: 0px;
+  }
+
+  100% {
+    bottom: 10px;
+  }
+}
